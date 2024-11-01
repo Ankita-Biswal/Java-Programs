@@ -13,7 +13,8 @@ public class AmStrongNo {
 		System.out.println(num+"is an amstrong no");
 	}
 	else {
-			System.out.println(num+"is not an amstrong no");
+			System.out.println(num+""
+					+ "is not an amstrong no");
 		}
 	}
 
