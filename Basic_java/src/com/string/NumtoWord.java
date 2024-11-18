@@ -8,7 +8,7 @@ public static void main(String[] args) {
 	numW(num/10000000," crore " );
 	numW((num/100000)%100," lakhs " );
 	numW((num/1000)%100," thousand " );
-	numW((num/100)%10," hundred " );
+	numW((num/100)%10," hundred" );
 	numW(num%100,"" );
 	
 }
