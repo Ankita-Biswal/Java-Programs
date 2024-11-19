@@ -13,7 +13,7 @@ public class Arraylist {
 		if(pos>=a.length) increase();
 		a[pos++]=o;
 		
-		return "Added Successfully " + o +" "+pos;
+		return "Added sucessfully " + o +" "+pos;
 	}
 	public void increase() {
 		Object temp[]= new Object[a.length+3];
@@ -39,7 +39,7 @@ public class Arraylist {
 		}
 		pos--;
 		a[pos]=null;
-		return "Successfully Deleted "+a[index] +" "+pos;
+		return "Deleted Successfully "+a[index] +" "+pos;
 		
 	}
 	public Object  AddPlace(int index,Object o) {
@@ -52,7 +52,7 @@ public class Arraylist {
 		}
 		a[index]=o;
 		pos++;
-		return "SuccessFully Entered "+o+" in index :-"+index;
+		return " Entered SuccessFully"+o+" in index :-"+index;
 	}
 	
 	
