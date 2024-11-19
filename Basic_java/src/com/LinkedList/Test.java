@@ -12,6 +12,7 @@ public class Test {
 		 Node curr=first;
 		 while(curr!=null) {
 			 System.out.println(curr.ele);
+			 curr=curr.next;
 		 }
 
 	}
