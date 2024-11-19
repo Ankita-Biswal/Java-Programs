@@ -1,21 +1,59 @@
 package com.ArrayList;
 
 public class Arraylist {
-private Object []a;
-private int pos;
-
-public Arraylist() {
-	a=new Object[6];
-	pos=0;
-}
-
-public void Add (Object e) {
-	if(pos>=a.length) {
-		Object[]temp=new Object[a.length+3];
-		System.arraycopy(a, 0, temp,0 , a.length);
-		a=temp;
+	 private Object []a;
+	 private int pos;
+	
+	public Arraylist() {
+		a=new Object[5];
+		pos =0;
 	}
-	a[pos]=0;
-	pos++;
-}
+	
+	public String Add(Object o) {
+		if(pos>=a.length) increase();
+		a[pos++]=o;
+		
+		return "Added Successfully " + o +" "+pos;
+	}
+	public void increase() {
+		Object temp[]= new Object[a.length+3];
+		System.arraycopy(a, 0, temp, 0, a.length);
+	     a=temp;
+		
+	}
+	public int Size() {
+		return pos;
+	}
+	public Object get(int index) {
+		if(index<=-1||index>=Size()) {
+			throw new IndexOutOfBoundsException();
+		}
+		return a[index];
+	}
+	public String Remove(int index) {
+		if(index<=-1||index>=Size()) {
+			throw new IndexOutOfBoundsException();
+		}
+		for(int i =index+1;i<Size();i++) {
+			a[i-1]=a[i];
+		}
+		pos--;
+		a[pos]=null;
+		return "Successfully Deleted "+a[index] +" "+pos;
+		
+	}
+	public Object  AddPlace(int index,Object o) {
+		if(index<=-1||index>=Size()) {
+			throw new IndexOutOfBoundsException();
+		}
+		if(pos>=a.length)increase();
+		for(int i=Size()-1;i>=index;i--) {
+			a[i+1]=a[i];
+		}
+		a[index]=o;
+		pos++;
+		return "SuccessFully Entered "+o+" in index :-"+index;
+	}
+	
+	
 }
