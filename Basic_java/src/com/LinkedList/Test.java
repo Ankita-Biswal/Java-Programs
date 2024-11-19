@@ -10,6 +10,9 @@ public class Test {
 		first.next.next.next=new Node(40);
 		first.next.next.next.next=new Node(50);
 		 Node curr=first;
+		 while(curr!=null) {
+			 System.out.println(curr.ele);
+		 }
 
 	}
 
