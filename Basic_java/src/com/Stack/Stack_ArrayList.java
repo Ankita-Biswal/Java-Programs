@@ -1,5 +1,7 @@
 package com.Stack;
 
+import java.util.EmptyStackException;
+
 public class Stack_ArrayList {
 	
 	private Object[]a;
@@ -35,7 +37,7 @@ public class Stack_ArrayList {
 		return a[0];
 	}
 	public Object Pop() {
-		if(count==0)return null;
+		if(count==0)throw new EmptyStackException();
 		
 		Object temp = a[count - 1];
 		a[--count]=null;
