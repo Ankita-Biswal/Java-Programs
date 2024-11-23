@@ -22,6 +22,11 @@ public class DoubleLinkedList {
 		return;
 	}
 	
+	
+	public int size() {
+		return count;
+	}
+
 	public void add(int index,Object e) {
 		if(index<=-1||index>=size()) {
 			throw new IndexOutOfBoundsException();
@@ -44,11 +49,6 @@ public class DoubleLinkedList {
 		curr.next=n;
 		count++;
 	}
-	
-	public int size() {
-		return count;
-	}
-	
 	public Object get(int index) {
 		if(index<=-1||index>=size()) {
 			throw new IndexOutOfBoundsException();
