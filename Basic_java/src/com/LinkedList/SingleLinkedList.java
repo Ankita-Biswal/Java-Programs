@@ -19,6 +19,10 @@ while(curr.next!=null) {
 curr.next=new Node(e);
 count++;
 }
+public int size() {
+	
+	return count;
+}
 public void add(int index,Object e) {
 	if(index<=-1||index>=size()) {
 		throw new IndexOutOfBoundsException();
@@ -36,10 +40,23 @@ public void add(int index,Object e) {
 	count++;
 }
 
- public int size() {
-	
-	return count;
-}
+ 
+ public void remove(int index) {
+		if(index<=-1||index>=size()) {
+			throw new IndexOutOfBoundsException();
+		}
+		if(index==0) {
+			first=first.next;
+			count--;
+			return;
+		}
+		Node curr=first;
+		for(int i=1;i<index;i++) {
+			curr=curr.next;
+		}
+		curr.next=curr.next.next;
+		count--;
+	}
 
 public Object get(int index) {
 	if(index<=-1||index>=size()) {
@@ -52,22 +69,6 @@ public Object get(int index) {
 	return curr.ele;
 }
 
-public void remove(int index) {
-	if(index<=-1||index>=size()) {
-		throw new IndexOutOfBoundsException();
-	}
-	if(index==0) {
-		first=first.next;
-		count--;
-		return;
-	}
-	Node curr=first;
-	for(int i=1;i<index;i++) {
-		curr=curr.next;
-	}
-	curr.next=curr.next.next;
-	count--;
-}
 
 public void reverse() {
 	Node prev=null;
