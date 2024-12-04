@@ -72,4 +72,18 @@ private void postOrder(Node n) {
 	postOrder(n.right);
 	System.out.print(n.key+" ");
 }
+//...........inOrder traversal.........//
+public void inOrder() {
+inOrder(root);
+System.out.println();
+	
+}
+private void inOrder(Node n) {
+	if(n==null)return;
+	
+	postOrder(n.left);
+	System.out.print(n.key+" ");
+	postOrder(n.right);
+	
+}
 }
