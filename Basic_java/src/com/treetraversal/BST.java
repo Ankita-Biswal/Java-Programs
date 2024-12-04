@@ -59,4 +59,17 @@ private void preOrder(Node n) {
 	preOrder(n.left);
 	preOrder(n.right);
 }
+//...........postOrder traversal.........//
+public void postOrder() {
+postOrder(root);
+System.out.println();
+	
+}
+private void postOrder(Node n) {
+	if(n==null)return;
+	
+	postOrder(n.left);
+	postOrder(n.right);
+	System.out.print(n.key+" ");
+}
 }
