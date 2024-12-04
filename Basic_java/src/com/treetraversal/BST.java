@@ -6,11 +6,6 @@ private Node root;
 private int count;
 private boolean flag;
 
-public boolean add(int key) {
-	flag=true;
-	root= addNode(root,key);
-	return flag;
-}
 
 private Node addNode(Node n, int key) {
 	if(n==null) {
@@ -31,6 +26,12 @@ private Node addNode(Node n, int key) {
 	return n;
 	
 	
+}
+
+public boolean add(int key) {
+	flag=true;
+	root= addNode(root,key);
+	return flag;
 }
 public int size() {
 	return count;
