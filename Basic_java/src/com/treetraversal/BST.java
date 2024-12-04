@@ -47,5 +47,16 @@ public void levelOrder() {
 	}
 	System.out.println();
 }
-
+//Depth first search........PreOrder Traversal...........//
+public void preOrder() {
+preOrder(root);
+System.out.println();
+	
+}
+private void preOrder(Node n) {
+	if(n==null)return;
+	System.out.print(n.key+" ");
+	preOrder(n.left);
+	preOrder(n.right);
+}
 }
