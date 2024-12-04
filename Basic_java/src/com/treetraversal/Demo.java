@@ -16,5 +16,6 @@ public static void main(String[] args) {
 	
 	
 	b.levelOrder();
+	b.preOrder();
 }
 }
