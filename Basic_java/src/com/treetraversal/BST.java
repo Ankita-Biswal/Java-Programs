@@ -32,7 +32,7 @@ public boolean add(int key) {
 	flag=true;
 	root= addNode(root,key);
 	return flag;
-}
+} 
 public int size() {
 	return count;
 }
