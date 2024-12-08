@@ -23,9 +23,7 @@ private Node addNode(Node n, int key) {
 	else {
 		flag=false;
 	}
-	return n;
-	
-	
+	return n;	
 }
 
 public boolean add(int key) {
