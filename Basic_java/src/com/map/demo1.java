@@ -22,5 +22,12 @@ public static void main(String[] args) {
 	
 	System.out.println(map1.get(103));
 	System.out.println(map1.get(108));
+	
+	System.out.println(map1.containsKey(104));
+	System.out.println(map1.containsKey(123));
+	
+	
+	System.out.println(map1.containsValue("Ruchi"));
+	System.out.println(map1.containsValue("ruchi"));
 }
 }
