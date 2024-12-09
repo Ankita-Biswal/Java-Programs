@@ -19,5 +19,8 @@ public static void main(String[] args) {
 	
 	map1.putAll(map2);
 	System.out.println(map1);
+	
+	System.out.println(map1.get(103));
+	System.out.println(map1.get(108));
 }
 }
